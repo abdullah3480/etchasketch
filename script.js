@@ -21,7 +21,7 @@ let grid = [];
 container.addEventListener('mouseenter',() =>{
 
     for(let i = rows; i < rows*rows; i++){
-        grid[i].addEventListener('mouseenter', ()=>{
+        grid[i].addEventListener('mouseover', ()=>{
             grid[i].style.backgroundColor = "blue"
             console.log("work2")
         })
@@ -37,8 +37,12 @@ function createNewGrid(){
         grid[i].remove()
     }
 
-    rows = prompt()
-    if(rows > 100) rows = 100;
+    rows = Number(prompt())
+    console.log(rows)
+    
+    console.log(typeof(rows))
+    // if(rows > 100) rows = 100;
+
     grid.length = rows*rows +rows;
     for(let i = 0; i < rows;i++){
     grid[i] = document.createElement("div")
