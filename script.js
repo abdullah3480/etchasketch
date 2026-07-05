@@ -17,6 +17,10 @@ button.addEventListener('click',createNewGrid)
 
 
 let grid = [];
+
+
+
+
 function createNewGrid(){
     
     for(let i = 0; i < rows; i++){
@@ -24,7 +28,7 @@ function createNewGrid(){
     }
 
     rows = prompt()
-
+    if(rows > 100) rows = 100;
     grid.length = rows*rows +rows;
     for(let i = 0; i < rows;i++){
     grid[i] = document.createElement("div")
