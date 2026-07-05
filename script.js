@@ -13,8 +13,12 @@ body.insertBefore(button,container)
 button.textContent = "Press to enter No of rows"
 
 let rows = 0;
-button.addEventListener('click', ()=>{
+button.addEventListener('click',createNewGrid)
 
+
+let grid = [];
+function createNewGrid(){
+    
     for(let i = 0; i < rows; i++){
         grid[i].remove()
     }
@@ -22,7 +26,7 @@ button.addEventListener('click', ()=>{
     rows = prompt()
 
     grid.length = rows*rows +rows;
-for(let i = 0; i < rows;i++){
+    for(let i = 0; i < rows;i++){
     grid[i] = document.createElement("div")
     container.appendChild(grid[i])
     for(let j = 0 ; j < rows; j++){
@@ -33,10 +37,6 @@ for(let i = 0; i < rows;i++){
     grid[i].classList.add("row")
     
 }
-})
-
-let grid = [];
-
-
+}
 
 
