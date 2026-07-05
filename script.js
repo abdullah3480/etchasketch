@@ -14,7 +14,13 @@ button.textContent = "Press to enter No of rows"
 
 let rows = 0;
 button.addEventListener('click', ()=>{
+
+    for(let i = 0; i < rows; i++){
+        grid[i].remove()
+    }
+
     rows = prompt()
+
     grid.length = rows*rows +rows;
 for(let i = 0; i < rows;i++){
     grid[i] = document.createElement("div")
