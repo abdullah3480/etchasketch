@@ -18,7 +18,17 @@ button.addEventListener('click',createNewGrid)
 
 let grid = [];
 
+container.addEventListener('mouseenter',() =>{
 
+    for(let i = rows; i < rows*rows; i++){
+        grid[i].addEventListener('mouseenter', ()=>{
+            grid[i].style.backgroundColor = "blue"
+            console.log("work2")
+        })
+    }
+    
+   console.log("works")
+})
 
 
 function createNewGrid(){

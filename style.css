@@ -1,17 +1,18 @@
 .box{
-    border: 2px solid black;
-    padding: 5px;
+    border: 1px solid black;
+    
     display: flex;
     flex: 1;
     flex-wrap: wrap;
     flex-direction: row;
-    
+    padding: 13px;
     
 }
 .row{
     display: flex;
     flex: 1;
-    flex-direction: row;
+    width: 100%;
+    
 }
 
 .container{
@@ -19,6 +20,7 @@
     flex: 1;
     flex-direction: column;
     flex-wrap: wrap;
+   
 }
 
 button{
