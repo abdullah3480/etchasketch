@@ -20,10 +20,10 @@ let grid = [];
 
 container.addEventListener('mouseenter',() =>{
 
-    for(let i = rows; i < rows*rows; i++){
+    for(let i = rows; i < rows*rows + rows; i++){
         grid[i].addEventListener('mouseover', ()=>{
             grid[i].style.backgroundColor = "blue"
-            console.log("work2")
+            
         })
     }
     
