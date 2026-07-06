@@ -4,13 +4,16 @@ const body = document.querySelector("body")
 
 const button = document.createElement("button")
 
-
+const buttonContainer = document.createElement("div")
 const container = document.querySelector("div")
 container.classList.add("container")
 
-body.insertBefore(button,container)
+body.insertBefore(buttonContainer,container)
 
+buttonContainer.appendChild(button)
 button.textContent = "Press to enter No of rows"
+
+buttonContainer.classList.add("buttonCont")
 
 let rows = 0;
 button.addEventListener('click',createNewGrid)
@@ -41,7 +44,7 @@ function createNewGrid(){
     console.log(rows)
     
     console.log(typeof(rows))
-    // if(rows > 100) rows = 100;
+    if(rows > 100) rows = 100;
 
     grid.length = rows*rows +rows;
     for(let i = 0; i < rows;i++){
